@@ -1,0 +1,14 @@
+{% extends "base.html" %}
+
+{% block content %}
+<h1>Hogwarts High Schools Home Page</h1>
+<p>Welcome to this web!</p>
+<!-- ini buat test doang -->
+<p>Students list:</p>
+<ul>
+    {% for student in students %}
+    <li><strong>{{ student }}</strong>
+    {% endfor %}
+</ul>
+<!-- ini buat bagian session --> 
+{% endblock %}
