@@ -14,4 +14,4 @@ def add_teacher(request):
     context = {
         'form': form
     }
-    return render(request, 'teachers_form.html', context=context)
+    return render(request, 'teacher_form.html', context=context)
