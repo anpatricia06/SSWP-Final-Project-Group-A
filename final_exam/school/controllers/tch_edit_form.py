@@ -1,5 +1,5 @@
 from django.shortcuts import render
-from school.models.student import Student
+from school.models.student import Teacher
 #ini bagian buat import dari form
 
 def edit_teacher(request, teacher_id):
