@@ -1,11 +1,13 @@
 {% extends "base.html" %}
 
 {% block content %}
-<h1>Hogwarts High School Students</h1>
+
+<h1>Hogwarts High School Students and Teachers List</h1>
 <p style="text-decoration:underline;">Students list:</p>
 <ul>
     {% for student in students %}
-    <li><strong>{{ students }}</strong> - <a href="{% url 'edit_student' student.id %}">[Edit]</a> - <a href="{% url 'delete_student' student.id %}">[Delete]</a></li>
+    <li><strong>{{ student }}</strong> - <a href="{% url 'edit_student' student.id %}">[Edit]</a> - <a href="{% url 'delete_student' student.id %}">[Delete]</a></li>
+
     {% endfor %}
 </ul>
 <p>
