@@ -1,6 +1,6 @@
 from django.shortcuts import render
 from school.models.student import Student
-#bagian sini buat import dari bagian form
+from school.forms import StudentForm
 
 def add_student(request):
     if request.method == 'POST':
