@@ -1,6 +1,6 @@
 from django.shortcuts import render
-from school.models.student import Teacher
-#ini buat bagian form
+from school.models.teacher import Teacher
+from school.forms import TeacherForm
 
 def add_teacher(request):
     if request.method == 'POST':
