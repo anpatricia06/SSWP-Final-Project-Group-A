@@ -1,6 +1,6 @@
 from django.shortcuts import render
-from school.models.student import Teacher
-#ini bagian buat import dari form
+from school.models.teacher import Teacher
+from school.forms import TeacherForm
 
 def edit_teacher(request, teacher_id):
     if request.method == 'POST':
