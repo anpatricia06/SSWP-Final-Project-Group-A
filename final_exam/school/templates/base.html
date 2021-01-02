@@ -22,6 +22,18 @@
                        <li class="nav-item"><a class="nav-link" href="{% url 'teachers' %}">Teachers</a></li>
                     </ul>
                 </div>
+               <div>
+                    {% if user.is_authenticated %}
+                    Hello, {{ user.get_username }}
+                    <a href="{% url 'logout' %}?next={{ request.path }}">Log Out</a>
+                    {% else %}
+                    {% if 'login' in request.path %}
+                    <a href="{% url 'login' %}?next={{ '/' }}">Log In</a>
+                    {% else %}
+                    <a href="{% url 'login' %}?next={{ request.path }}">Log In</a>
+                    {% endif %}
+                    {% endif %}
+                </div>
             </nav>
             <div class="row">
                 {% block content %}{% endblock %}
