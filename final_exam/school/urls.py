@@ -1,6 +1,6 @@
 from django.urls import path
 
-from school.controllers import index_controller, student_controller, teacher_controller, subject_controller, std_add_controller, std_edit_controller, std_del_controller, tch_add_controller, tch_edit_controller, tch_del_controller
+from school.controllers import index_controller, student_controller, teacher_controller, subject_controller, std_add_controller, std_edit_controller, std_del_controller, tch_add_controller, tch_edit_controller, tch_del_controller, registration_controller
 
 
 urlpatterns= [
@@ -14,4 +14,5 @@ urlpatterns= [
     path('teacher/edit/<int:teacher_id>', tch_edit_controller.edit_teacher, name='edit_teacher'),
     path('teacher/delete/<int:teacher_id>', tch_del_controller.delete_teacher, name='delete_teacher'),
     path('subjects/', subject_controller.list_subjects, name='subjects'),
+    path('register', registration_controller.index, name='register'),
 ]
