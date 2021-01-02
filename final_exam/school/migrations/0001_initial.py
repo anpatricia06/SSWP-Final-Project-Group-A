@@ -13,12 +13,6 @@ class Migration(migrations.Migration):
 
     operations = [
         migrations.CreateModel(
-            name='StudentClass',
-            fields=[
-                ('id', models.AutoField(auto_created=True, primary_key=True, serialize=False, verbose_name='ID')),
-            ],
-        ),
-        migrations.CreateModel(
             name='StudentId',
             fields=[
                 ('id', models.AutoField(auto_created=True, primary_key=True, serialize=False, verbose_name='ID')),
@@ -67,7 +61,6 @@ class Migration(migrations.Migration):
                 ('s_address', models.CharField(max_length=50, verbose_name='Address')),
                 ('s_phonenum', models.CharField(max_length=20, verbose_name='Phone Number:')),
                 ('s_email', models.CharField(max_length=30, verbose_name='E-mail')),
-                ('student_class', models.ForeignKey(on_delete=django.db.models.deletion.CASCADE, to='school.studentclass')),
                 ('student_id', models.OneToOneField(on_delete=django.db.models.deletion.CASCADE, to='school.studentid')),
                 ('teacher_id', models.ForeignKey(on_delete=django.db.models.deletion.CASCADE, to='school.teacherid')),
             ],
