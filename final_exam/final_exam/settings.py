@@ -120,5 +120,13 @@ USE_TZ = True
 
 STATIC_URL = '/static/'
 
+EMAIL_BACKEND = 'django.core.mail.backends.smtp.EmailBackend'
+EMAIL_USE_SSL = True
+EMAIL_HOST = 'smtp.gmail.com'
+EMAIL_PORT = 465
+EMAIL_HOST_USER = 'johanna.hutauruk@student.president.ac.id'
+EMAIL_HOST_PASSWORD = '20010825'
+
+
 LOGIN_REDIRECT_URL = '/'
 
