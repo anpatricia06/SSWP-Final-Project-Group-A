@@ -1,5 +1,7 @@
 from django.urls import path
+
 from school.controllers import index_controller, student_controller, teacher_controller, subject_controller, std_add_controller, std_edit_controller, std_del_controller, tch_add_controller, tch_edit_controller, tch_del_controller
+
 
 urlpatterns= [
     path('', index_controller.index, name='index'),
