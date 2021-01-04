@@ -1,7 +1,9 @@
 from django.shortcuts import render
 from school.models.teacher import Teacher
 from school.forms import TeacherForm
+from django.contrib.auth.decorators import login_required
 
+@login_required
 def add_teacher(request):
     if request.method == 'POST':
         form = TeacherForm(request.POST)
