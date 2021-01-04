@@ -11,4 +11,9 @@
 <p>
     <a href="{% url 'add_teacher' %}">Add New Teacher</a>
 </p>
+<form method="post" action="">
+    {% csrf_token %}
+    <input name="t_name" type="text" />
+    <button type="submit">Search</button>
+</form>
 {% endblock %}
