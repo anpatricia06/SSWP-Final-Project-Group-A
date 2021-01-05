@@ -1,4 +1,5 @@
 from django.shortcuts import render
+from school.models.oxford import Dictionary
 from school.forms import DictionaryForm
 
 def oxford(request):
