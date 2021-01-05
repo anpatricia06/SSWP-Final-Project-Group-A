@@ -1,5 +1,5 @@
 from django.contrib import admin
-from school.models import subject,position,teacher_id,teacher,student_id,student
+from school.models import subject,position,teacher_id,teacher,student_id,student,oxford,extracurricular
 # Register your models here.
 
 admin.site.register(subject.Subject)
