@@ -14,6 +14,8 @@ import os
 
 from pathlib import Path
 
+from decouple import config
+
 # Build paths inside the project like this: BASE_DIR / 'subdir'.
 BASE_DIR = Path(__file__).resolve().parent.parent
 
@@ -132,3 +134,5 @@ EMAIL_HOST_PASSWORD = '20010825'
 
 LOGIN_REDIRECT_URL = '/'
 
+OXFORD_APP_ID = config('OXFORD_APP_ID', default='')
+OXFORD_APP_KEY = config('OXFORD_APP_KEY', default='')
