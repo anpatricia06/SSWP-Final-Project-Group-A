@@ -1,6 +1,6 @@
 from django.urls import path
 
-from school.controllers import index_controller, student_controller, teacher_controller, subject_controller, std_add_controller, std_edit_controller, std_del_controller, tch_add_controller, tch_edit_controller, tch_del_controller, registration_controller
+from school.controllers import index_controller, student_controller, teacher_controller, subject_controller, std_add_controller, std_edit_controller, std_del_controller, tch_add_controller, tch_edit_controller, tch_del_controller, registration_controller, oxford_dict_controller, extracurricular_controller
 
 
 urlpatterns= [
@@ -15,4 +15,6 @@ urlpatterns= [
     path('teacher/delete/<int:teacher_id>', tch_del_controller.delete_teacher, name='delete_teacher'),
     path('subjects/', subject_controller.list_subjects, name='subjects'),
     path('register', registration_controller.index, name='register'),
+    path('oxforddict', oxford_dict_controller.oxford, name='oxford'),
+    path('extracurricular', extracurricular_controller.list_extracurriculars, name='extracurricular'),
 ]
