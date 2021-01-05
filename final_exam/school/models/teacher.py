@@ -17,4 +17,4 @@ class Teacher(models.Model):
         app_label= 'school'
 
     def __str__(self):
-        return f'{self.t_name}'
+        return f'{self.t_name}, {self.subject}'
