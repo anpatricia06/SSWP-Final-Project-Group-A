@@ -1,0 +1,13 @@
+{% extends "base.html" %}
+ 
+{% block content %}
+<h1>Hogwarts High School Extracurriculars </h1>
+<p style="text-decoration:underline;">Extracurriculars list:</p>
+<ul>
+    {% for extracurricular in extracurriculars %}
+    <li><strong>{{ extracurricular }}</strong>
+ 
+    {% endfor %}
+</ul>
+ 
+{% endblock %}
