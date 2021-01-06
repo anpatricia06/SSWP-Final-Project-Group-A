@@ -43,3 +43,13 @@ class DictionaryForm(ModelForm):
             else:
                 result['message'] = 'The Oxford API is not available at the moment. Please try again later.'
         return result
+
+class StudentIdForm(ModelForm):
+    class Meta:
+        model= StudentId
+        fields= ['s_id']
+
+class TeacherIdForm(ModelForm):
+    class Meta:
+        model= TeacherId
+        fields= ['t_id']
