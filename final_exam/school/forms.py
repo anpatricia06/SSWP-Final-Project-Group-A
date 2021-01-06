@@ -6,14 +6,15 @@ from school.models.student_id import StudentId
 from school.models.teacher_id import TeacherId
 from school.models.subject import Subject
 from school.models.position import TeacherPosition
-from django.conf import settings
 from school.models.oxford import Dictionary
+from school.models.extracurricular import Extracurricular
+from django.conf import settings
 import requests
 
 class StudentForm(ModelForm):
     class Meta:
         model= Student
-        fields= ['student_id', 's_name', 's_dob', 's_address', 's_phonenum', 's_email', 'teacher_id']
+        fields= ['student_id', 's_name', 's_dob', 's_address', 's_phonenum', 's_email', 'teacher_id', 'extracurricular']
 
 class TeacherForm(ModelForm):
     class Meta:
