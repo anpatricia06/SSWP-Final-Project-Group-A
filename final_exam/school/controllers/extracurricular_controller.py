@@ -4,6 +4,6 @@ from school.models.extracurricular import Extracurricular
 def list_extracurriculars(request):
     extracurriculars= Extracurricular.objects.all()
     context={
-        'extracurriculars':extracurricular,
+        'extracurriculars':extracurriculars,
     }
-    return render(request, 'extracurricular.html', context=data)
+    return render(request, 'extracurricular.html', context=context)
