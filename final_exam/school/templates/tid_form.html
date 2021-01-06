@@ -1,0 +1,26 @@
+{% extends "base.html" %}
+
+{% block content %}
+<p>Please input your teacher id number same as gave from school administration!</p>
+{% if type != 'edit' %}
+<h1>Add a new teacher id</h1>
+{% else %}
+<h1>Add a new teacher id</h1>
+{% endif %}
+<form action="" method="POST">
+    {% csrf_token %}
+    <table>
+        {{ form.as_table }}
+    </table>
+    {% if type != 'edit' %}
+    <input type="submit" value="Add" class="btn btn-primary" />
+    {% else %}
+    <input type="submit" value="Update" class="btn btn-primary" />
+    {% endif %}
+    <a href="{% url 'teachers' %}" class="btn btn-danger">Cancel</a>
+</form>
+<p>After fill in your teacher id number, you must add your teacher identity. Please click to below link!</p>
+<p>  
+    <a href="{% url 'add_teacher' %}">Add New Teacher Identity</a>
+</p>
+{% endblock %}

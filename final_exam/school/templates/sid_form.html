@@ -1,0 +1,26 @@
+{% extends "base.html" %}
+
+{% block content %}
+<p>Please input your student id number same as in your registration form number!</p>
+{% if type != 'edit' %}
+<h1>Add a new student id</h1>
+{% else %}
+<h1>Add a new student id</h1>
+{% endif %}
+<form action="" method="POST">
+    {% csrf_token %}
+    <table>
+        {{ form.as_table }}
+    </table>
+    {% if type != 'edit' %}
+    <input type="submit" value="Add" class="btn btn-primary" />
+    {% else %}
+    <input type="submit" value="Update" class="btn btn-primary" />
+    {% endif %}
+    <a href="{% url 'students' %}" class="btn btn-danger">Cancel</a>
+</form>
+<p>After fill in your student id number, you must add your student identity. Please click to below link!</p>
+<p>  
+    <a href="{% url 'add_student' %}">Add New Student Identity</a>
+</p>
+{% endblock %}
