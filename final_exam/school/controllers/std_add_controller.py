@@ -1,4 +1,6 @@
 from django.shortcuts import render
+from django.http import HttpResponse, HttpResponseRedirect
+from django.urls import reverse
 from school.models.student import Student
 from school.forms import StudentForm
 from django.contrib.auth.decorators import login_required
