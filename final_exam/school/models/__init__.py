@@ -4,3 +4,5 @@ from .teacher_id import TeacherId
 from .teacher import Teacher
 from .student_id import StudentId
 from .student import Student
+from .oxford import Dictionary
+from .extracurricular import Extracurricular
